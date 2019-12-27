@@ -1,0 +1,318 @@
+:root {
+    --fundo_tela_principal: #1a1a1a;
+    --sombra_tela_principal: 0px 0px 30px 5px #1a1a1a;
+
+    --luz_verde_apagada: #009e2a;
+    --luz_verde_acesa: #00ff44;
+    --sombra_luz_verde_acesa: 0px 0px 30px 5px #00ff44;
+
+    --luz_azul_apagada: #007ab3;
+    --luz_azul_acesa: #00aeff;
+    --sombra_luz_azul_acesa: 0px 0px 30px 5px #00aeff;
+
+    --luz_rosa_apagada: #b35473;
+    --luz_rosa_acesa: #ff75a2;
+    --sombra_luz_rosa_acesa: 0px 0px 30px 5px #ff75a2;
+
+    --luz_vermelho_apagada: #ad0000;
+    --luz_vermelho_acesa: #ff0000;
+    --sombra_luz_vermelho_acesa: 0px 0px 30px 5px #ff0000;
+
+    --luz_amarelo_apagada: #b39e00;
+    --luz_amarelo_acesa: #ffe100;
+    --sombra_luz_amarelo_acesa: 0px 0px 30px 5px #ffe100;
+
+    --luz_laranja_apagada: #bd7100;
+    --luz_laranja_acesa: #ff9800;
+    --sombra_luz_laranja_acesa: 0px 0px 30px 5px #ff9800;
+
+    --placar_fundo: #e0e0e0;
+    --plano_de_fundo_novo_jogo: #1e1e1fc5;
+    --plano_de_fundo_opcoes_novo_jogo: #ebebeb;
+    --plano_de_fundo_detalhes_jogo: #ebebeb;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tela-principal {
+    position: relative;
+    display: flex;
+    flex-direction: column; 
+    width: 800px;
+    height: 600px;
+    border-radius: 4px;
+    background-color: var(--fundo_tela_principal);
+    -webkit-box-shadow: var(--sombra_tela_principal);
+    -moz-box-shadow: var(--sombra_tela_principal);
+    box-shadow: var(--sombra_tela_principal);
+    overflow: hidden;
+}
+
+.sequencia-automatica {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.console-jogador {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+}
+
+.luz {
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    margin: 5px;
+}
+
+.luz.manual:hover {
+    cursor: pointer;
+}
+
+/*#region TIPOZ DE LUZ*/
+.luz.verde {
+    background-color: var(--luz_verde_apagada);
+}
+
+.luz.azul {
+    background-color: var(--luz_azul_apagada);
+}
+
+.luz.vermelho {
+    background-color: var(--luz_vermelho_apagada);
+}
+
+.luz.amarelo {
+    background-color: var(--luz_amarelo_apagada);
+}
+
+.luz.rosa {
+    background-color: var(--luz_rosa_apagada);
+}
+
+.luz.laranja {
+    background-color: var(--luz_laranja_apagada);
+}
+/*#endregion*/
+
+/*#region LUZ MANUAL ACTIVE*/
+.luz.azul:active {
+    background-color: var(--luz_azul_acesa);
+    -webkit-box-shadow: var(--sombra_luz_azul_acesa);
+    -moz-box-shadow: var(--sombra_luz_azul_acesa);
+    box-shadow: var(--sombra_luz_azul_acesa);
+}
+
+.luz.verde:active {
+    background-color: var(--luz_verde_acesa);
+    -webkit-box-shadow: var(--sombra_luz_verde_acesa);
+    -moz-box-shadow: var(--sombra_luz_verde_acesa);
+    box-shadow: var(--sombra_luz_verde_acesa);
+}
+
+.luz.vermelho:active {
+    background-color: var(--luz_vermelho_acesa);
+    -webkit-box-shadow: var(--sombra_luz_vermelho_acesa);
+    -moz-box-shadow: var(--sombra_luz_vermelho_acesa);
+    box-shadow: var(--sombra_luz_vermelho_acesa);
+}
+
+.luz.amarelo:active {
+    background-color: var(--luz_amarelo_acesa);
+    -webkit-box-shadow: var(--sombra_luz_amarelo_acesa);
+    -moz-box-shadow: var(--sombra_luz_amarelo_acesa);
+    box-shadow: var(--sombra_luz_amarelo_acesa);
+}
+
+.luz.rosa:active {
+    background-color: var(--luz_rosa_acesa);
+    -webkit-box-shadow: var(--sombra_luz_rosa_acesa);
+    -moz-box-shadow: var(--sombra_luz_rosa_acesa);
+    box-shadow: var(--sombra_luz_rosa_acesa);
+}
+
+.luz.laranja:active {
+    background-color: var(--luz_laranja_acesa);
+    -webkit-box-shadow: var(--sombra_luz_laranja_acesa);
+    -moz-box-shadow: var(--sombra_luz_laranja_acesa);
+    box-shadow: var(--sombra_luz_laranja_acesa);
+}
+
+/*#endregion*/
+
+/*#region LUZ ACESA*/
+.luz.azul.luz-azul-acesa {
+    background-color: var(--luz_azul_acesa) !important;
+    -webkit-box-shadow: var(--sombra_luz_azul_acesa);
+    -moz-box-shadow: var(--sombra_luz_azul_acesa);
+    box-shadow: var(--sombra_luz_azul_acesa);
+}
+
+.luz.verde.luz-verde-acesa {
+    background-color: var(--luz_verde_acesa) !important;
+    -webkit-box-shadow: var(--sombra_luz_verde_acesa);
+    -moz-box-shadow: var(--sombra_luz_verde_acesa);
+    box-shadow: var(--sombra_luz_verde_acesa);
+}
+
+.luz.vermelho.luz-vermelho-acesa {
+    background-color: var(--luz_vermelho_acesa) !important;
+    -webkit-box-shadow: var(--sombra_luz_vermelho_acesa);
+    -moz-box-shadow: var(--sombra_luz_vermelho_acesa);
+    box-shadow: var(--sombra_luz_vermelho_acesa);
+}
+
+.luz.amarelo.luz-amarelo-acesa {
+    background-color: var(--luz_amarelo_acesa) !important;
+    -webkit-box-shadow: var(--sombra_luz_amarelo_acesa);
+    -moz-box-shadow: var(--sombra_luz_amarelo_acesa);
+    box-shadow: var(--sombra_luz_amarelo_acesa);
+}
+
+.luz.rosa.luz-rosa-acesa {
+    background-color: var(--luz_rosa_acesa) !important;
+    -webkit-box-shadow: var(--sombra_luz_rosa_acesa);
+    -moz-box-shadow: var(--sombra_luz_rosa_acesa);
+    box-shadow: var(--sombra_luz_rosa_acesa);
+}
+
+.luz.laranja.luz-laranja-acesa {
+    background-color: var(--luz_laranja_acesa) !important;
+    -webkit-box-shadow: var(--sombra_luz_laranja_acesa);
+    -moz-box-shadow: var(--sombra_luz_laranja_acesa);
+    box-shadow: var(--sombra_luz_laranja_acesa);
+}
+/*#endregion*/
+
+.btn-jogar {
+    width: 100px;
+    height: 40px;
+    position: absolute;
+    top: 280px;
+    left: 360px;
+    font-family: fantasy;
+    color: #2e2e2e;
+    font-size: 20px;
+    background-color: #00ffaa;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0px 0px 30px 5px #00ffaa;
+}
+
+.placar {
+    position: absolute;
+    left: 10;
+    top: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: var(--placar_fundo);
+}
+
+.placar h2 {
+    font-family: fantasy;
+    color: #2e2e2e;
+}
+
+.janela-novo-jogo {
+    /*width: 380px;
+    height: 250px;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    border-radius: 4px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-top: auto;
+    background-color: var(--plano_de_fundo_novo_jogo);
+    z-index: 100;
+}
+
+.janela-novo-jogo .opcoes-novo-jogo {
+    width: 380px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--plano_de_fundo_opcoes_novo_jogo);
+}
+
+.opcoes-novo-jogo .titulo {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #2e2e2e;
+}
+
+.opcoes-novo-jogo .opcoes {
+    flex: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #2e2e2e;
+}
+
+.opcoes-novo-jogo .rodape {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #2e2e2e;
+}
+
+.rodape .btn-novo-jogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 40px;
+    font-family: fantasy;
+    color: #2e2e2e;
+    font-size: 20px;
+    background-color: #5b8be6;
+    border: none;
+    border-radius: 4px;
+    /*box-shadow: 0px 0px 30px 5px #00ffaa;*/
+}
+
+.detalhes-jogo {
+    margin-left: 10px;
+    width: 380px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--plano_de_fundo_detalhes_jogo);
+}

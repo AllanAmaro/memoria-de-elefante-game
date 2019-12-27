@@ -1,0 +1,67 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Index</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <script src="js/main.js"></script>
+    <script src="js/luz.js"></script>
+    <script src="js/constants.js"></script>
+    <script src="js/jogo-console.js"></script>
+</head>
+
+<body onload="carrega()">
+
+    <div id="janela-novo-jogo" class="janela-novo-jogo">
+
+        <div class="opcoes-novo-jogo">
+            <div class="titulo">
+                Novo Jogo
+            </div>
+            <div class="opcoes">
+                Opcoes: em desenvolvimento
+            </div>
+            <div class="rodape">
+                <div class="btn-novo-jogo" onclick="jogar()">
+                    Jogar
+                </div>
+            </div>
+        </div>
+
+        <div class="detalhes-jogo">
+
+        </div>
+
+    </div>
+
+    <div class="tela-principal">
+        
+        <div class="placar">
+            <h2 id="pontuacao">0</h2>
+        </div>
+		
+        <div class="sequencia-automatica">
+
+            <div id="luz-verde" class="luz verde"></div>
+            <div id="luz-azul" class="luz azul"></div>
+            <div id="luz-vermelho" class="luz vermelho"></div>
+            <div id="luz-amarelo" class="luz amarelo"></div>
+            <div id="luz-rosa" class="luz rosa"></div>
+            <div id="luz-laranja" class="luz laranja"></div>
+
+        </div>
+
+        <div id="console-jogador" class="console-jogador">
+
+            <div onclick="luzEscolhida(1)" class="luz verde manual"></div>
+            <div onclick="luzEscolhida(2)" class="luz azul manual"></div>
+            <div onclick="luzEscolhida(3)" class="luz vermelho manual"></div>
+            <div onclick="luzEscolhida(4)" class="luz amarelo manual"></div>
+            <div onclick="luzEscolhida(5)" class="luz rosa manual"></div>
+            <div onclick="luzEscolhida(6)" class="luz laranja manual"></div>
+            
+        </div>
+
+    </div>
+</body>
+<html>
